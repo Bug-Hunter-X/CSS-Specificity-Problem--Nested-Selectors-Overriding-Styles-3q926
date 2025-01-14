@@ -1,0 +1,11 @@
+The following CSS code snippet demonstrates an issue where the selector is too specific and causing unexpected behavior.  The `#container` class is nested deep, making it difficult to override styles.
+
+```css
+#container > .section > .item {
+  background-color: red;
+}
+
+#container .item {
+  background-color: blue; /* This rule is never applied because of the specificity of the first rule */
+}
+```
